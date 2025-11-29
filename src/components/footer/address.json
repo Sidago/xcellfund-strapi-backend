@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_footer_addresses",
+    "info": {
+        "name": "address",
+        "icon": "link",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "required": false
+        },
+        "address": {
+            "type": "text",
+            "required": false
+        },
+        "links": {
+            "type": "component",
+            "repeatable": true,
+            "component": "common.link",
+            "required": false
+        }
+    }
+}

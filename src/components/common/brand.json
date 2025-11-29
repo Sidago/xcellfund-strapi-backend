@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_common_brands",
+  "info": {
+    "displayName": "brand",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "required": true
+    },
+    "alt_text": {
+      "type": "string",
+      "required": true,
+      "default": "xcellfund"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link",
+      "required": false
+    }
+  },
+  "config": {}
+}

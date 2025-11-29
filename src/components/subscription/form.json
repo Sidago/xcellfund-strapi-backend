@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_subscription_forms",
+  "info": {
+    "displayName": "form",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "input": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.input"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.button"
+    }
+  },
+  "config": {}
+}

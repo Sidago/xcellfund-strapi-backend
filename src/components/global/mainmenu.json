@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_global_mainmenus",
+  "info": {
+    "displayName": "mainmenu",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "brand": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.brand",
+      "required": false
+    },
+    "menus": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.menu",
+      "required": false
+    }
+  },
+  "config": {}
+}

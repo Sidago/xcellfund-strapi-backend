@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "maxLength": 255,
+      "required": false
+    },
+    "icon": {
+      "type": "component",
+      "required": false,
+      "repeatable": false,
+      "component": "common.icon"
+    }
+  },
+  "config": {}
+}

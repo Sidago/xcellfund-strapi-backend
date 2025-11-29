@@ -1,0 +1,37 @@
+{
+    "collectionName": "components_common_heros",
+    "info": {
+        "name": "hero",
+        "icon": "bars",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": false
+        },
+        "subtitle": {
+            "type": "string",
+            "required": false
+        },
+        "description": {
+            "type": "text",
+            "required": false
+        },
+        "background_image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ],
+            "required": false
+        },
+        "links": {
+            "type": "component",
+            "repeatable": false,
+            "component": "common.link",
+            "required": false
+        }
+    }
+}

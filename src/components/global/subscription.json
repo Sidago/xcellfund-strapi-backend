@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_global_subscriptions",
+  "info": {
+    "displayName": "subscription",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "form": {
+      "type": "component",
+      "repeatable": false,
+      "component": "subscription.form"
+    }
+  },
+  "config": {}
+}

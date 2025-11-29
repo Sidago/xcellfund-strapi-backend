@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_common_links",
+  "info": {
+    "displayName": "link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "maxLength": 255,
+      "required": false
+    },
+    "aria_label": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "text",
+      "enum": [
+        "text",
+        "phone",
+        "email"
+      ]
+    },
+    "target": {
+      "type": "enumeration",
+      "required": true,
+      "default": "_self",
+      "enum": [
+        "_self",
+        "_blank"
+      ]
+    },
+    "icon": {
+      "type": "component",
+      "required": false,
+      "repeatable": false,
+      "component": "common.icon"
+    },
+    "external": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_global_topnavs",
+  "info": {
+    "displayName": "topnav",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "contacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.link",
+      "required": false
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.link",
+      "required": false
+    }
+  },
+  "config": {}
+}

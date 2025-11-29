@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_global_contacts",
+  "info": {
+    "displayName": "contacts",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link",
+      "required": false
+    }
+  },
+  "config": {}
+}

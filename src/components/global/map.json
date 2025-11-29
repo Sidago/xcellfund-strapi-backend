@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_maps",
+  "info": {
+    "displayName": "map",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "embed_link": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

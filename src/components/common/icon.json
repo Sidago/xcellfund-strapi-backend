@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_common_icons",
+    "info": {
+        "displayName": "icon",
+        "icon": "expand"
+    },
+    "options": {},
+    "attributes": {
+        "name": {
+            "type": "enumeration",
+            "required": false,
+            "default": "none",
+            "enum": [
+                "none",
+                "faEnvelope",
+                "faPhone",
+                "faFacebookF",
+                "faTwitter",
+                "faInstagram",
+                "faLinkedinIn"
+            ]
+        }
+    },
+    "config": {}
+}

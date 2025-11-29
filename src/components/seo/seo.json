@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "seo",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "siteName": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "string"
+    },
+    "web_creator": {
+      "type": "string"
+    },
+    "twitter_creator": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "og_image_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "metadataBase": {
+      "type": "string"
+    },
+    "canonical": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

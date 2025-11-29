@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_common_inputs",
+  "info": {
+    "displayName": "input",
+    "icon": "expand"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "description": "Visible label shown for the input field"
+    },
+    "icon":{
+      "type": "component",
+      "required": false,
+      "repeatable": false,
+      "component": "common.icon"
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "description": "Machine-friendly field name (used as the input's name/id; no spaces)"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "email",
+        "tel",
+        "password",
+        "number",
+        "textarea"
+      ],
+      "default": "text",
+      "description": "HTML input type or 'textarea' for multi-line input"
+    },
+    "placeholder": {
+      "type": "string",
+      "description": "Placeholder text displayed inside the field when empty"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the input field is required"
+    }
+  },
+  "config": {}
+}

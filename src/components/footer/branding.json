@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_footer_brandings",
+    "info": {
+        "name": "branding",
+        "icon": "bars",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "brand": {
+            "type": "component",
+            "repeatable": false,
+            "component": "common.brand",
+            "required": false
+        },
+        "company_description": {
+            "type": "text",
+            "required": false
+        }
+    }
+}

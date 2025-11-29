@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_menus",
+  "info": {
+    "displayName": "menu",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "menu": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link",
+      "required": false
+    },
+    "submenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.link",
+      "required": false
+    }
+  },
+  "config": {}
+}
