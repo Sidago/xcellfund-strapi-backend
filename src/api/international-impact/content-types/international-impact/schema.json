@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "international_impacts",
+  "info": {
+    "singularName": "international-impact",
+    "pluralName": "international-impacts",
+    "displayName": "international-impact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

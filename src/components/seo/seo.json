@@ -6,22 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "siteName": {
+    "creator": {
       "type": "string"
     },
-    "authors": {
-      "type": "string"
-    },
-    "web_creator": {
-      "type": "string"
-    },
-    "twitter_creator": {
-      "type": "string"
-    },
-    "publisher": {
-      "type": "string"
-    },
-    "og_image_url": {
+    "og_image": {
       "type": "string"
     },
     "title": {
@@ -31,9 +19,6 @@
       "type": "text"
     },
     "keywords": {
-      "type": "string"
-    },
-    "metadataBase": {
       "type": "string"
     },
     "canonical": {

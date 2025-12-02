@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "executive_viewpoints",
+  "info": {
+    "singularName": "executive-viewpoint",
+    "pluralName": "executive-viewpoints",
+    "displayName": "executive-viewpoint"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

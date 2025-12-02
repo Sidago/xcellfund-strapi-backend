@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "collateralized_fundings",
+  "info": {
+    "singularName": "collateralized-funding",
+    "pluralName": "collateralized-fundings",
+    "displayName": "collateralized-funding"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

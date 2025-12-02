@@ -1,21 +1,22 @@
 {
-    "collectionName": "components_footer_quicklinks",
-    "info": {
-        "name": "quicklins",
-        "icon": "link",
-        "description": ""
+  "collectionName": "components_footer_quicklinks",
+  "info": {
+    "name": "quicklins",
+    "icon": "link",
+    "description": "",
+    "displayName": "quicklink"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": false
     },
-    "options": {},
-    "attributes": {
-        "heading": {
-            "type": "string",
-            "required": false
-        },
-        "links": {
-            "type": "component",
-            "repeatable": true,
-            "component": "common.link",
-            "required": false
-        }
+    "links": {
+      "type": "component",
+      "component": "common.link",
+      "repeatable": true,
+      "required": false
     }
+  }
 }

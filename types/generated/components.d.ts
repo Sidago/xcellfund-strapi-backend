@@ -1,5 +1,51 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CardCard extends Struct.ComponentSchema {
+  collectionName: 'components_card_card';
+  info: {
+    description: 'A card component to highlight features with an icon, title, description, and optional link.';
+    displayName: 'Basic Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Component<'common.icon', false>;
+    link: Schema.Attribute.Component<'common.link', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CarouselCarousel extends Struct.ComponentSchema {
+  collectionName: 'components_carousel_carousel';
+  info: {
+    description: 'A carousel component that displays multiple carousel items in a sliding format.';
+    displayName: 'Carousel';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'carousel.carousel-item', true> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface CarouselCarouselItem extends Struct.ComponentSchema {
+  collectionName: 'components_carousel_carousel_item';
+  info: {
+    description: 'An individual item within a carousel component, containing an image and optional caption.';
+    displayName: 'Carousel Item';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CommonBrand extends Struct.ComponentSchema {
   collectionName: 'components_common_brands';
   info: {
@@ -34,7 +80,8 @@ export interface CommonHero extends Struct.ComponentSchema {
   collectionName: 'components_common_heros';
   info: {
     description: '';
-    icon: 'bars';
+    displayName: 'hero';
+    icon: 'link';
     name: 'hero';
   };
   attributes: {
@@ -62,6 +109,11 @@ export interface CommonIcon extends Struct.ComponentSchema {
         'faTwitter',
         'faInstagram',
         'faLinkedinIn',
+        'faWarehouse',
+        'faScaleBalanced',
+        'faRedRiver',
+        'faBlackberry',
+        'faChevronRight',
       ]
     > &
       Schema.Attribute.DefaultTo<'none'>;
@@ -127,10 +179,23 @@ export interface CommonMenu extends Struct.ComponentSchema {
   };
 }
 
+export interface ContactForm extends Struct.ComponentSchema {
+  collectionName: 'components_contact_forms';
+  info: {
+    displayName: 'contactform';
+    icon: 'landscape';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'common.button', false>;
+    input: Schema.Attribute.Component<'common.input', true>;
+  };
+}
+
 export interface FooterAddress extends Struct.ComponentSchema {
   collectionName: 'components_footer_addresses';
   info: {
     description: '';
+    displayName: 'address';
     icon: 'link';
     name: 'address';
   };
@@ -145,6 +210,7 @@ export interface FooterBranding extends Struct.ComponentSchema {
   collectionName: 'components_footer_brandings';
   info: {
     description: '';
+    displayName: 'branding';
     icon: 'bars';
     name: 'branding';
   };
@@ -158,6 +224,7 @@ export interface FooterCopyright extends Struct.ComponentSchema {
   collectionName: 'components_footer_copyrights';
   info: {
     description: '';
+    displayName: 'copyright';
     icon: 'link';
     name: 'copyright';
   };
@@ -171,11 +238,12 @@ export interface FooterFooter extends Struct.ComponentSchema {
   collectionName: 'components_footer_footers';
   info: {
     description: '';
+    displayName: 'footer';
     icon: 'bars';
     name: 'footer';
   };
   attributes: {
-    address: Schema.Attribute.Component<'footer.address', true>;
+    address: Schema.Attribute.Component<'footer.address', false>;
     branding: Schema.Attribute.Component<'footer.branding', false>;
     copyright: Schema.Attribute.Component<'footer.copyright', false>;
     quicklinks: Schema.Attribute.Component<'footer.quicklink', false>;
@@ -186,6 +254,7 @@ export interface FooterQuicklink extends Struct.ComponentSchema {
   collectionName: 'components_footer_quicklinks';
   info: {
     description: '';
+    displayName: 'quicklink';
     icon: 'link';
     name: 'quicklins';
   };
@@ -233,17 +302,6 @@ export interface GlobalMap extends Struct.ComponentSchema {
   };
 }
 
-export interface GlobalSubscription extends Struct.ComponentSchema {
-  collectionName: 'components_global_subscriptions';
-  info: {
-    displayName: 'subscription';
-    icon: 'link';
-  };
-  attributes: {
-    form: Schema.Attribute.Component<'subscription.form', false>;
-  };
-}
-
 export interface GlobalTopnav extends Struct.ComponentSchema {
   collectionName: 'components_global_topnavs';
   info: {
@@ -256,6 +314,47 @@ export interface GlobalTopnav extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeServices extends Struct.ComponentSchema {
+  collectionName: 'components_home_services';
+  info: {
+    description: 'A component to showcase various services offered, each represented by a card.';
+    displayName: 'Services';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'card.card', true> &
+      Schema.Attribute.Required;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface HomeWhoWeAre extends Struct.ComponentSchema {
+  collectionName: 'components_home_who_we_are';
+  info: {
+    description: 'Who We Are section component for the home page.';
+    displayName: 'who we are';
+    name: 'Who We Are';
+  };
+  attributes: {
+    left_content: Schema.Attribute.Component<'card.card', false> &
+      Schema.Attribute.Required;
+    right_content: Schema.Attribute.Component<'card.card', false> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface HomeWhoWeAreBanner extends Struct.ComponentSchema {
+  collectionName: 'components_home_who_we_are_banner';
+  info: {
+    description: 'A banner component for the Who We Are section on the home page.';
+    displayName: 'Who We Are Banner';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'card.card', false> &
+      Schema.Attribute.Required;
+    images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+  };
+}
+
 export interface SeoSeo extends Struct.ComponentSchema {
   collectionName: 'components_seo_seos';
   info: {
@@ -263,17 +362,12 @@ export interface SeoSeo extends Struct.ComponentSchema {
     icon: 'database';
   };
   attributes: {
-    authors: Schema.Attribute.String;
     canonical: Schema.Attribute.String;
+    creator: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     keywords: Schema.Attribute.String;
-    metadataBase: Schema.Attribute.String;
-    og_image_url: Schema.Attribute.String;
-    publisher: Schema.Attribute.String;
-    siteName: Schema.Attribute.String;
+    og_image: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    twitter_creator: Schema.Attribute.String;
-    web_creator: Schema.Attribute.String;
   };
 }
 
@@ -292,6 +386,9 @@ export interface SubscriptionForm extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'card.card': CardCard;
+      'carousel.carousel': CarouselCarousel;
+      'carousel.carousel-item': CarouselCarouselItem;
       'common.brand': CommonBrand;
       'common.button': CommonButton;
       'common.hero': CommonHero;
@@ -299,6 +396,7 @@ declare module '@strapi/strapi' {
       'common.input': CommonInput;
       'common.link': CommonLink;
       'common.menu': CommonMenu;
+      'contact.form': ContactForm;
       'footer.address': FooterAddress;
       'footer.branding': FooterBranding;
       'footer.copyright': FooterCopyright;
@@ -307,8 +405,10 @@ declare module '@strapi/strapi' {
       'global.contact': GlobalContact;
       'global.mainmenu': GlobalMainmenu;
       'global.map': GlobalMap;
-      'global.subscription': GlobalSubscription;
       'global.topnav': GlobalTopnav;
+      'home.services': HomeServices;
+      'home.who-we-are': HomeWhoWeAre;
+      'home.who-we-are-banner': HomeWhoWeAreBanner;
       'seo.seo': SeoSeo;
       'subscription.form': SubscriptionForm;
     }

@@ -1,35 +1,36 @@
 {
-    "collectionName": "components_footer_footers",
-    "info": {
-        "name": "footer",
-        "icon": "bars",
-        "description": ""
+  "collectionName": "components_footer_footers",
+  "info": {
+    "name": "footer",
+    "icon": "bars",
+    "description": "",
+    "displayName": "footer"
+  },
+  "options": {},
+  "attributes": {
+    "branding": {
+      "type": "component",
+      "component": "footer.branding",
+      "repeatable": false,
+      "required": false
     },
-    "options": {},
-    "attributes": {
-        "branding": {
-            "type": "component",
-            "repeatable": false,
-            "component": "footer.branding",
-            "required": false
-        },
-        "quicklinks": {
-            "type": "component",
-            "repeatable": false,
-            "component": "footer.quicklink",
-            "required": false
-        },
-        "address": {
-            "type": "component",
-            "repeatable": true,
-            "component": "footer.address",
-            "required": false
-        },
-        "copyright": {
-            "type": "component",
-            "repeatable": false,
-            "component": "footer.copyright",
-            "required": false
-        }
+    "quicklinks": {
+      "type": "component",
+      "component": "footer.quicklink",
+      "repeatable": false,
+      "required": false
+    },
+    "address": {
+      "type": "component",
+      "component": "footer.address",
+      "repeatable": false,
+      "required": false
+    },
+    "copyright": {
+      "type": "component",
+      "component": "footer.copyright",
+      "repeatable": false,
+      "required": false
     }
+  }
 }

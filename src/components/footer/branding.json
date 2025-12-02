@@ -1,21 +1,22 @@
 {
-    "collectionName": "components_footer_brandings",
-    "info": {
-        "name": "branding",
-        "icon": "bars",
-        "description": ""
+  "collectionName": "components_footer_brandings",
+  "info": {
+    "name": "branding",
+    "icon": "bars",
+    "description": "",
+    "displayName": "branding"
+  },
+  "options": {},
+  "attributes": {
+    "brand": {
+      "type": "component",
+      "component": "common.brand",
+      "repeatable": false,
+      "required": false
     },
-    "options": {},
-    "attributes": {
-        "brand": {
-            "type": "component",
-            "repeatable": false,
-            "component": "common.brand",
-            "required": false
-        },
-        "company_description": {
-            "type": "text",
-            "required": false
-        }
+    "company_description": {
+      "type": "text",
+      "required": false
     }
+  }
 }

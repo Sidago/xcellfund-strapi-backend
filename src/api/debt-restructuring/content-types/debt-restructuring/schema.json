@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "debt_restructurings",
+  "info": {
+    "singularName": "debt-restructuring",
+    "pluralName": "debt-restructurings",
+    "displayName": "debt-restructuring"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

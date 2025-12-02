@@ -1,21 +1,22 @@
 {
-    "collectionName": "components_footer_copyrights",
-    "info": {
-        "name": "copyright",
-        "icon": "link",
-        "description": ""
+  "collectionName": "components_footer_copyrights",
+  "info": {
+    "name": "copyright",
+    "icon": "link",
+    "description": "",
+    "displayName": "copyright"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "common.link",
+      "repeatable": true,
+      "required": false
     },
-    "options": {},
-    "attributes": {
-        "links": {
-            "type": "component",
-            "repeatable": true,
-            "component": "common.link",
-            "required": false
-        },
-        "copyright_text": {
-            "type": "text",
-            "required": false
-        }
+    "copyright_text": {
+      "type": "text",
+      "required": false
     }
+  }
 }

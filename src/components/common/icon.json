@@ -17,7 +17,12 @@
                 "faFacebookF",
                 "faTwitter",
                 "faInstagram",
-                "faLinkedinIn"
+                "faLinkedinIn",
+                "faWarehouse",
+                "faScaleBalanced",
+                "faRedRiver",
+                "faBlackberry",
+                "faChevronRight"
             ]
         }
     },

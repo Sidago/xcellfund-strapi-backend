@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "mobile_applications",
+  "info": {
+    "singularName": "mobile-application",
+    "pluralName": "mobile-applications",
+    "displayName": "mobile-application"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

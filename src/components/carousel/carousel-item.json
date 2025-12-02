@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_carousel_carousel_item",
+  "info": {
+    "displayName": "Carousel Item",
+    "description": "An individual item within a carousel component, containing an image and optional caption."
+  },
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

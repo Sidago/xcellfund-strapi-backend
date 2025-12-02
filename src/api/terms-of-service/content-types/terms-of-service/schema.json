@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_of_services",
+  "info": {
+    "singularName": "terms-of-service",
+    "pluralName": "terms-of-services",
+    "displayName": "terms-of-service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

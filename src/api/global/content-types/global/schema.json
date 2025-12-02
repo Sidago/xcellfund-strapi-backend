@@ -35,10 +35,16 @@
       "component": "global.contact",
       "required": false
     },
+    "contact_form": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contact.form",
+      "required": false
+    },
     "subscription_section": {
       "type": "component",
       "repeatable": false,
-      "component": "global.subscription",
+      "component": "subscription.form",
       "required": false
     },
     "footer_section": {

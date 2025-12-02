@@ -1,37 +1,38 @@
 {
-    "collectionName": "components_common_heros",
-    "info": {
-        "name": "hero",
-        "icon": "bars",
-        "description": ""
+  "collectionName": "components_common_heros",
+  "info": {
+    "name": "hero",
+    "icon": "link",
+    "description": "",
+    "displayName": "hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
     },
-    "options": {},
-    "attributes": {
-        "title": {
-            "type": "string",
-            "required": false
-        },
-        "subtitle": {
-            "type": "string",
-            "required": false
-        },
-        "description": {
-            "type": "text",
-            "required": false
-        },
-        "background_image": {
-            "type": "media",
-            "multiple": false,
-            "allowedTypes": [
-                "images"
-            ],
-            "required": false
-        },
-        "links": {
-            "type": "component",
-            "repeatable": false,
-            "component": "common.link",
-            "required": false
-        }
+    "subtitle": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "links": {
+      "type": "component",
+      "component": "common.link",
+      "repeatable": false,
+      "required": false
     }
+  }
 }

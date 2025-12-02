@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "internet_advertisings",
+  "info": {
+    "singularName": "internet-advertising",
+    "pluralName": "internet-advertisings",
+    "displayName": "internet-advertising"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}
