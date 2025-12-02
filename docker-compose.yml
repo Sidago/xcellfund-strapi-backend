@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  xcellfund-strapi-backend:
+    env_file:
+      - .env
+    image: strapi-backend-xcellfund:latest
+    container_name: strapi-backend-xcellfund
+    ports:
+      - "1337:1337"
+    restart: unless-stopped
