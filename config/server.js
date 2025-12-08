@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  url: env('STRAPI_PUBLIC_URL', 'http://127.0.0.1:1337/backend'),
+  // url: env('STRAPI_PUBLIC_URL', 'http://127.0.0.1:1337/backend'),
   admin: {
     serveAdminPanel: true,
   },
