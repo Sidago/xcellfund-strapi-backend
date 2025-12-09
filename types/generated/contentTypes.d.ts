@@ -467,6 +467,39 @@ export interface ApiCollateralizedFundingCollateralizedFunding
   };
 }
 
+export interface ApiContactMessageContactMessage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_messages';
+  info: {
+    displayName: 'ContactMessage';
+    pluralName: 'contact-messages';
+    singularName: 'contact-message';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-message.contact-message'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    phone: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    subject: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   collectionName: 'contact_uses';
   info: {
@@ -1657,6 +1690,34 @@ export interface ApiStockLoanStockLoan extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSubscriberSubscriber extends Struct.CollectionTypeSchema {
+  collectionName: 'subscribers';
+  info: {
+    displayName: 'Subscriber';
+    pluralName: 'subscribers';
+    singularName: 'subscriber';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::subscriber.subscriber'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTermsOfServiceTermsOfService
   extends Struct.SingleTypeSchema {
   collectionName: 'terms_of_services';
@@ -2350,6 +2411,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::collateralized-funding.collateralized-funding': ApiCollateralizedFundingCollateralizedFunding;
+      'api::contact-message.contact-message': ApiContactMessageContactMessage;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::convertible-debenture.convertible-debenture': ApiConvertibleDebentureConvertibleDebenture;
       'api::corporate-accountability.corporate-accountability': ApiCorporateAccountabilityCorporateAccountability;
@@ -2383,6 +2445,7 @@ declare module '@strapi/strapi' {
       'api::seed-investment.seed-investment': ApiSeedInvestmentSeedInvestment;
       'api::series-d-funding.series-d-funding': ApiSeriesDFundingSeriesDFunding;
       'api::stock-loan.stock-loan': ApiStockLoanStockLoan;
+      'api::subscriber.subscriber': ApiSubscriberSubscriber;
       'api::terms-of-service.terms-of-service': ApiTermsOfServiceTermsOfService;
       'api::vision-and-goal.vision-and-goal': ApiVisionAndGoalVisionAndGoal;
       'api::web-property.web-property': ApiWebPropertyWebProperty;

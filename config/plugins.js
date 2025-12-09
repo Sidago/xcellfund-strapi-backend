@@ -34,7 +34,7 @@ module.exports = ({ env }) => ({
 
     /** REST Cache Plugin */
     "rest-cache": {
-        enabled: true,
+        enabled: false,
         config: {
             provider: {
                 name: "redis",
