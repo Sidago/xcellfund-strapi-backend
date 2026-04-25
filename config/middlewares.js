@@ -8,5 +8,8 @@ module.exports = [
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
+  {
+    resolve: './src/middlewares/admin-login-redirect',
+  },
   'strapi::public',
 ];
