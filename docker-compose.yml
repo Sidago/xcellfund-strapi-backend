@@ -2,10 +2,17 @@ version: "3"
 
 services:
   strapi-backend-xcellfund:
-    env_file:
-      - .env
+    build: .
     image: strapi-backend-xcellfund:latest
     container_name: strapi-backend-xcellfund
+
+    env_file:
+      - .env
+
     ports:
       - "1337:1337"
+
+    volumes:
+      - ./public/uploads:/app/public/uploads
+
     restart: unless-stopped
